@@ -91,5 +91,7 @@ class Dog
           new_dog = self.create({:name => name, :breed => breed})
         end
           new_dog
-        end   
+        end 
+        
+        
   end
