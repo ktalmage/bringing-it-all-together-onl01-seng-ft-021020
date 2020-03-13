@@ -45,6 +45,12 @@ class Dog
         self
       end
       
+      def self.create(hash_of_attributes)
+        dog = self.new(hash_of_attributes)
+        dog.save
+        dog
+      end
+      
       def update
       sql = "UPDATE dogs SET name = ?,breed = ? WHERE id = ?"
         DB[:conn].execute(sql,self.name,self.breed,self.id)
